@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant&display=swap');
+
+$font-stack: 'Cormorant',
+serif;
+$light-weight:300;
+$normal-weight:400;
+
+@mixin font-cormorant-light {
+    font-family: $font-stack;
+    font-weight: $light-weight;
+}
+
+@mixin font-cormorant-normal {
+    font-family: $font-stack;
+    font-weight: $normal-weight;
+}

@@ -1,0 +1,30 @@
+.header {
+    background-color: $header-background-color;
+    height:100%;
+    width: 100%;
+
+    @include tablet{
+        height:80%;
+        width: 80%;
+    }
+
+    @include desktop{
+        height:30vh;
+        width: 80%;
+    }
+
+    @include large-desktop{
+        height:30vh;
+        width: 80%;
+    }
+
+    @include xlarge-desktop{
+        height:30vh;
+        width: 80%;
+    }
+    
+    @include xxlarge-desktop{
+        height:30vh;
+        width: 80%;
+    }
+}

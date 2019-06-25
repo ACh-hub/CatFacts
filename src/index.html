@@ -11,12 +11,41 @@
     <title>### Tytuł roboczy ###</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../dist/styles.css">
 </head>
 
 <body>
-    <h1><%= __('Hello') %></h1>
+    <main class="main">
+        <section class="section--header">
+            <header class="header">
+                <figure>
+                    Here comes logo
+                </figure>
+                <figure>
+                    Here comes animation
+                </figure>
+            </header>
+        </section>
+        <section class="section--article">
+            <article class="article">
+                <h4>Felis catus</h4>
+                <h1>Cats Facts</h1>
+                <p>Here comes the cat fact</p>
+                <figure>Here comes the generate button</figure>
+                <footer>
+                    <details>
+                        <summary>Copyright</summary>
+                        <p>- by your company</p>
+                        <p>Content governed by copyright.</p>
+                    </details>
+                </footer>
+            </article>
+        </section>
+    </main>
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <script src="../dist/app.js"></script>
 </body>
+
 </html>

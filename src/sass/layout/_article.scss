@@ -1,0 +1,48 @@
+.article {
+    background-color: $article-background-color;
+    width: 100%;
+    height: 100%;
+    
+    h4 {
+        @include font-cormorant-light;
+        font-style: italic;
+    }
+
+    h1 {
+        @include font-cormorant-normal;
+    }
+
+    p {
+        @include font-cormorant-light;
+    }
+
+    details {
+        @include font-cormorant-light;
+        font-style: italic;
+    }
+
+    @include tablet{
+        height: 20vh;
+        width:80vw;
+    }
+
+    @include desktop{
+        width: 80%;
+        height: 80%;
+    }
+    @include large-desktop{
+        width: 80%;
+        height: 80%;
+    }
+
+    @include xlarge-desktop{
+        width: 80%;
+        height: 80%;
+    }
+
+    @include xxlarge-desktop{
+        width: 80%;
+        height: 80%;
+    }
+
+}

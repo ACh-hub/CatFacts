@@ -1,0 +1,18 @@
+.section--header{
+    background-color: $section-header-background-color;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height:60vh;
+    width: 100vw;
+
+}
+
+.section--article{
+    background-color: $section-article-background-color;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height:40vh;
+    width: 100vw;
+}
