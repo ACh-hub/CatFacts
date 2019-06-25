@@ -1,18 +1,24 @@
-.section--header{
+.section--header {
     background-color: $section-header-background-color;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height:60vh;
+    height: 50vh;
     width: 100vw;
 
 }
 
-.section--article{
+.section--article {
     background-color: $section-article-background-color;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height:40vh;
+    height: 50vh;
     width: 100vw;
+
+    p.copyright{
+        @include font-cormorant-light;
+        font-style: italic;
+        flex-grow: 0;
+    }
 }
