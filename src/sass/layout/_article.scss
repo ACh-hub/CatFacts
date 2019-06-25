@@ -2,28 +2,35 @@
     background-color: $article-background-color;
     width: 100%;
     height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
     h4 {
         @include font-cormorant-light;
         font-style: italic;
+        margin-top: 1em;
+        margin-bottom: 0.2em;
     }
 
     h1 {
         @include font-cormorant-normal;
+        margin: 0;
     }
 
     p {
         @include font-cormorant-light;
+        text-align: center;
+        margin: 0;
+        padding: 1em;
+        flex-grow: 1;
     }
 
-    details {
-        @include font-cormorant-light;
-        font-style: italic;
-    }
 
     @include tablet{
-        height: 20vh;
-        width:80vw;
+        width: 80%;
+        height: 80%;
     }
 
     @include desktop{
