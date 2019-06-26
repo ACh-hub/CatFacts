@@ -17,6 +17,7 @@ class App {
     };
     init() {
       onLoad(this.view.button,'click',()=>this.controller.updateFact())
+      this.view.renderAnimation();
       this.controller.updateFact();
     };
   }
