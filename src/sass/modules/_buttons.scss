@@ -7,5 +7,14 @@
     padding-right: 1em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    border: 1px solid $textgrey
+    border: 1px solid $textgrey;
+
+    &:hover{
+        animation: button 1s;
+    }
+
+    &:active{
+        background-color:$section-header-background-color;
+        color:$article-background-color;
+    }
 }
