@@ -7,14 +7,15 @@
     padding-right: 1em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    border: 1px solid $textgrey;
+    border: 1px solid $text-grey;
+    box-shadow: 0 2px 4px -2px $shadow;
 
     &:hover{
         animation: button 1s;
+        animation-fill-mode: forwards;
     }
 
     &:active{
-        background-color:$section-header-background-color;
-        color:$article-background-color;
+        animation: button-active 0.5s;
     }
 }
