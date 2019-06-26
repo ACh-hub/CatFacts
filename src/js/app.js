@@ -3,21 +3,25 @@ import 'regenerator-runtime/runtime'
 
 import '../sass/styles.scss'
 
-import Ui from '../js/modules/ui';
-import ApiCall from '../js/modules/apicall';
+import View from './modules/view';
+import Model from './modules/model';
+import Controller from './modules/controller';
+import { onLoad } from './modules/onload';
 
-const ui = new Ui()
-const apicall = new ApiCall()
 
-//Initial fact
-apicall.getCatFact(fact)
-.then(fact=>ui.updateUi(fact.text))
-.catch(err => console.log(err));
-
-ui.button.addEventListener("click",()=>{
-    apicall.getCatFact(fact)
-.then(fact=>ui.updateUi(fact.text))
-.catch(err => console.log(err));
-})
+class App {
+    constructor() {
+      this.model = new Model();
+      this.view = new View();
+      this.controller = new Controller(this.model,this.view);
+    };
+    init() {
+      onLoad(this.view.button,'click',()=>this.controller.updateFact())
+      this.controller.updateFact();
+    };
+  }
+  const app = new App();
+  
+  onLoad(window,'load',()=>app.init())
 
 

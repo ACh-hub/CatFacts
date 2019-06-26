@@ -1,10 +1,12 @@
-export default class Ui {
+import { onLoad } from "./onload";
+
+export default class View {
     constructor() {
         this.fact = document.querySelector("#fact");
         this.button = document.querySelector(".btn");
     }
 
-    updateUi(fact){
+    render(fact){
         this.fact.innerHTML = `${fact}`
     }
 }
