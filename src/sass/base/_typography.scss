@@ -4,13 +4,17 @@ $font-stack: 'Cormorant',
 serif;
 $light-weight:300;
 $normal-weight:400;
+$normal-line-height: 1.5em;
 
 @mixin font-cormorant-light {
     font-family: $font-stack;
     font-weight: $light-weight;
+    line-height: $normal-line-height;
+    color: $textgrey;
 }
 
 @mixin font-cormorant-normal {
     font-family: $font-stack;
     font-weight: $normal-weight;
+    color:$textgrey;
 }

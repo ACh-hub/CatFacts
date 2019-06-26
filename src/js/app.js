@@ -9,6 +9,15 @@ import ApiCall from '../js/modules/apicall';
 const ui = new Ui()
 const apicall = new ApiCall()
 
+//Initial fact
 apicall.getCatFact(fact)
 .then(fact=>ui.updateUi(fact.text))
 .catch(err => console.log(err));
+
+ui.button.addEventListener("click",()=>{
+    apicall.getCatFact(fact)
+.then(fact=>ui.updateUi(fact.text))
+.catch(err => console.log(err));
+})
+
+
