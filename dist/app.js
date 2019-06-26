@@ -4194,31 +4194,55 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/stable */ \"./node_modules/core-js/stable/index.js\");\n/* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ \"./node_modules/regenerator-runtime/runtime.js\");\n/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _js_modules_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/modules/ui */ \"./src/js/modules/ui.js\");\n/* harmony import */ var _js_modules_apicall__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../js/modules/apicall */ \"./src/js/modules/apicall.js\");\n\n\n\n\n\nconst ui = new _js_modules_ui__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\nconst apicall = new _js_modules_apicall__WEBPACK_IMPORTED_MODULE_4__[\"default\"](); //Initial fact\n\napicall.getCatFact(fact).then(fact => ui.updateUi(fact.text)).catch(err => console.log(err));\nui.button.addEventListener(\"click\", () => {\n  apicall.getCatFact(fact).then(fact => ui.updateUi(fact.text)).catch(err => console.log(err));\n});\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/stable */ \"./node_modules/core-js/stable/index.js\");\n/* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ \"./node_modules/regenerator-runtime/runtime.js\");\n/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _modules_view__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/view */ \"./src/js/modules/view.js\");\n/* harmony import */ var _modules_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/model */ \"./src/js/modules/model.js\");\n/* harmony import */ var _modules_controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/controller */ \"./src/js/modules/controller.js\");\n/* harmony import */ var _modules_onload__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/onload */ \"./src/js/modules/onload.js\");\n\n\n\n\n\n\n\n\nclass App {\n  constructor() {\n    this.model = new _modules_model__WEBPACK_IMPORTED_MODULE_4__[\"default\"]();\n    this.view = new _modules_view__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\n    this.controller = new _modules_controller__WEBPACK_IMPORTED_MODULE_5__[\"default\"](this.model, this.view);\n  }\n\n  init() {\n    Object(_modules_onload__WEBPACK_IMPORTED_MODULE_6__[\"onLoad\"])(this.view.button, 'click', () => this.controller.updateFact());\n    this.controller.updateFact();\n  }\n\n}\n\nconst app = new App();\nObject(_modules_onload__WEBPACK_IMPORTED_MODULE_6__[\"onLoad\"])(window, 'load', () => app.init());\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 
-/***/ "./src/js/modules/apicall.js":
-/*!***********************************!*\
-  !*** ./src/js/modules/apicall.js ***!
-  \***********************************/
+/***/ "./src/js/modules/controller.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/controller.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return ApiCall; });\nclass ApiCall {\n  constructor() {\n    this.catFactsUrl = 'https://cat-fact.herokuapp.com/facts/random';\n  }\n\n  async getCatFact() {\n    const response = await fetch(this.catFactsUrl);\n    const responseData = await response.json();\n    return responseData;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/modules/apicall.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Controller; });\nclass Controller {\n  constructor(model, view) {\n    this.model = model;\n    this.view = view;\n  }\n\n  updateFact() {\n    this.model.getData().then(fact => this.view.render(fact.text)).catch(err => console.log(err));\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/modules/controller.js?");
 
 /***/ }),
 
-/***/ "./src/js/modules/ui.js":
-/*!******************************!*\
-  !*** ./src/js/modules/ui.js ***!
-  \******************************/
+/***/ "./src/js/modules/model.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/model.js ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Ui; });\nclass Ui {\n  constructor() {\n    this.fact = document.querySelector(\"#fact\");\n    this.button = document.querySelector(\".btn\");\n  }\n\n  updateUi(fact) {\n    this.fact.innerHTML = `${fact}`;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/modules/ui.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Model; });\nclass Model {\n  constructor() {\n    this.dataUrl = 'https://cat-fact.herokuapp.com/facts/random';\n  }\n\n  async getData() {\n    const response = await fetch(this.dataUrl);\n    const responseData = await response.json();\n    return responseData;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/modules/model.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/onload.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/onload.js ***!
+  \**********************************/
+/*! exports provided: onLoad */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"onLoad\", function() { return onLoad; });\nconst onLoad = (target, event, handler) => {\n  return target.addEventListener(event, handler);\n};\n\n\n\n//# sourceURL=webpack:///./src/js/modules/onload.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/view.js":
+/*!********************************!*\
+  !*** ./src/js/modules/view.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return View; });\n/* harmony import */ var _onload__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./onload */ \"./src/js/modules/onload.js\");\n\nclass View {\n  constructor() {\n    this.fact = document.querySelector(\"#fact\");\n    this.button = document.querySelector(\".btn\");\n  }\n\n  render(fact) {\n    this.fact.innerHTML = `${fact}`;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/modules/view.js?");
 
 /***/ }),
 
