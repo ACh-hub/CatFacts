@@ -9,15 +9,13 @@
     justify-content: flex-end;
 
     #animation-cat {
+        margin:0;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
 
-        svg {
-            align-self: flex-end;
-        }
-    }
+}
         @include tablet {
             height: 80%;
             width: 80%;
