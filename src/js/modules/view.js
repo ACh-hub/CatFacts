@@ -1,4 +1,6 @@
-import { onLoad } from "./onload";
+import {
+    onLoad
+} from "./onload";
 import lottie from "lottie-web";
 
 export default class View {
@@ -8,7 +10,7 @@ export default class View {
         this.button = document.querySelector(".btn");
     }
 
-    renderAnimation(){
+    renderAnimation() {
         const cat_animation = lottie.loadAnimation({
             container: this.animation,
             renderer: 'svg',
@@ -20,7 +22,7 @@ export default class View {
         cat_animation.play();
     }
 
-    render(fact){
+    render(fact) {
         this.fact.innerHTML = `${fact}`
     }
 }
