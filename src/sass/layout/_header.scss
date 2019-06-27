@@ -17,7 +17,7 @@
         svg {
             align-self: flex-end;
         }
-
+    }
         @include tablet {
             height: 80%;
             width: 80%;
@@ -43,4 +43,4 @@
             width: 80%;
         }
     }
-}
+
