@@ -1,35 +1,46 @@
 .header {
     background-color: $header-background-color;
-    height:100%;
+    height: 100%;
     width: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    
-    @include tablet{
-        height:80%;
-        width: 80%;
-    }
 
-    @include desktop{
-        height:80%;
-        width: 80%;
-    }
+    #animation-cat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
 
-    @include large-desktop{
-        height:80%;
-        width: 80%;
-    }
+        svg {
+            align-self: flex-end;
+        }
 
-    @include xlarge-desktop{
-        height:80%;
-        width: 80%;
-    }
-    
-    @include xxlarge-desktop{
-        height:80%;
-        width: 80%;
+        @include tablet {
+            height: 80%;
+            width: 80%;
+        }
+
+        @include desktop {
+            height: 80%;
+            width: 80%;
+        }
+
+        @include large-desktop {
+            height: 80%;
+            width: 80%;
+        }
+
+        @include xlarge-desktop {
+            height: 80%;
+            width: 80%;
+        }
+
+        @include xxlarge-desktop {
+            height: 80%;
+            width: 80%;
+        }
     }
 }

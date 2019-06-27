@@ -1,7 +1,23 @@
 @keyframes button {
 
-    0%   {background-color: $article-background-color;}
-    50%  {background-color: $section-article-background-color;}
-    100%  {background-color: $article-background-color;}
+    0% {
+        background-color: $article-background-color;
+    }
 
+    100% {
+        background-color: $section-article-background-color;
+    }
+
+}
+
+@keyframes button-active{
+    0% {
+        background-color: $section-article-background-color;
+        color:$text-grey;
+    }
+    
+    100% {
+        background-color: $cat-yellow;
+        color:$article-background-color;
+    }
 }
