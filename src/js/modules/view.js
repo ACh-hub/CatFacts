@@ -18,7 +18,6 @@ export default class View {
             autoplay: true,
             path: "../../assets/SVG/cat1.json"
         })
-
         cat_animation.play();
     }
 

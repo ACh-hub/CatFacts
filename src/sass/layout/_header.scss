@@ -9,50 +9,55 @@
     justify-content: flex-end;
 
     #animation-cat {
-        margin:0 auto;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        width: 332px;
-        height:220px;
+        @include animation-change-size($mobile-ratio);
+    }
 
-}
-        @include tablet {
-            height: 80%;
-            width: 80%;
-            #animation-cat {
-                width: 664px;
-                height:440px;
-        }
-        }
-
-        @include desktop {
-            height: 80%;
-            width: 80%;
-            #animation-cat {
-                width: 664px;
-                height:440px;
-        }
-        }
-
-        @include large-desktop {
-            height: 80%;
-            width: 80%;
-            #animation-cat {
-                width: 664px;
-                height:440px;
-        }
-        }
-
-        @include xlarge-desktop {
-            height: 80%;
-            width: 80%;
-        }
-
-        @include xxlarge-desktop {
-            height: 80%;
-            width: 80%;
+    @include tablet {
+        height: 80%;
+        width: 80%;
+        #animation-cat {
+        @include animation-change-size;
         }
     }
 
+    @include desktop {
+        height: 80%;
+        width: 80%;
+        #animation-cat {
+            @include animation-change-size;
+            }
+    }
+    
+
+    @include large-desktop {
+        height: 80%;
+        width: 80%;
+        #animation-cat {
+            @include animation-change-size;
+            }
+    }
+
+
+    @include xlarge-desktop {
+        height: 80%;
+        width: 80%;
+        #animation-cat {
+            @include animation-change-size;
+            }
+    }
+
+
+    @include xxlarge-desktop {
+        height: 80%;
+        width: 80%;
+        #animation-cat {
+            @include animation-change-size;
+            }
+    }
+
+}

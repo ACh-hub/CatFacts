@@ -1,0 +1,4 @@
+@mixin animation-change-size($ratio: (1)){
+    width: ($animation-width / $ratio);
+    height: ($animation-height / $ratio);
+}
