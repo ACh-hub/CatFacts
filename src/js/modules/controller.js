@@ -1,13 +1,13 @@
 export default class Controller {
-    constructor(model,view) {
-        this.model=model
-        this.view=view
+    constructor(model, view) {
+        this.model = model
+        this.view = view
     }
 
-    updateFact(){
+    updateFact() {
         this.model.getData()
-        .then(fact=>this.view.render(fact.text))
-        .catch(err => console.log(err));
+            .then(fact => this.view.render(fact.text))
+            .catch(err => console.log(err));
     }
 
 }

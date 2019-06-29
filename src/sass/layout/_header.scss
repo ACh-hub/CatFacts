@@ -1,35 +1,54 @@
 .header {
     background-color: $header-background-color;
-    height:100%;
+    height: 100%;
     width: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+
+    #animation-cat {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        @include animation-change-size($mobile-ratio);
+    }
+
+    @include tablet {
+        height: 80%;
+        width: 80%;
+        #animation-cat {
+            @include animation-change-size($mobile-ratio);
+        }
+    }
+
+    @include desktop {
+        height: 80%;
+        width: 80%;
+        #animation-cat {
+            @include animation-change-size;
+            }
+    }
     
-    @include tablet{
-        height:80%;
+
+    @include large-desktop {
+        height: 80%;
         width: 80%;
+        #animation-cat {
+            @include animation-change-size;
+            }
     }
 
-    @include desktop{
-        height:80%;
+
+    @include xlarge-desktop {
+        height: 80%;
         width: 80%;
+        #animation-cat {
+            @include animation-change-size;
+            }
     }
 
-    @include large-desktop{
-        height:80%;
-        width: 80%;
-    }
-
-    @include xlarge-desktop{
-        height:80%;
-        width: 80%;
-    }
-    
-    @include xxlarge-desktop{
-        height:80%;
-        width: 80%;
-    }
 }
