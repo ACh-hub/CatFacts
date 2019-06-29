@@ -9,26 +9,40 @@
     justify-content: flex-end;
 
     #animation-cat {
-        margin:0;
+        margin:0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
+        width: 332px;
+        height:220px;
 
 }
         @include tablet {
             height: 80%;
             width: 80%;
+            #animation-cat {
+                width: 664px;
+                height:440px;
+        }
         }
 
         @include desktop {
             height: 80%;
             width: 80%;
+            #animation-cat {
+                width: 664px;
+                height:440px;
+        }
         }
 
         @include large-desktop {
             height: 80%;
             width: 80%;
+            #animation-cat {
+                width: 664px;
+                height:440px;
+        }
         }
 
         @include xlarge-desktop {
