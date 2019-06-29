@@ -21,7 +21,7 @@
         height: 80%;
         width: 80%;
         #animation-cat {
-        @include animation-change-size;
+            @include animation-change-size($mobile-ratio);
         }
     }
 
