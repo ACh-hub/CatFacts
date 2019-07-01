@@ -8,10 +8,26 @@
     align-items: center;
     justify-content: flex-end;
 
-    #logo-wrapper {
-        width:240px;
-        flex: 2;
-        margin: 1em auto;
+    .spacer {
+        flex:2;
+    }
+
+    #logo-animation-wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 auto;
+        .box {
+            padding:1.5em;
+            text-transform: uppercase;
+            @include font-koho-light;
+            font-size: 0.7em;
+            letter-spacing: 0.15em;
+        }
+        #logo-wrapper {
+            width: 1.5em;
+            margin: 0 auto;
+        }
     }
 
     #animation-cat {

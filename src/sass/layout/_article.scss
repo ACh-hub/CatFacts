@@ -22,9 +22,11 @@
     p {
         @include font-cormorant-light;
         text-align: center;
-        margin: 0;
-        padding: 1em;
+        margin: 1em auto;
         flex-grow: 1;
+        padding-left: 10%;
+        padding-right: 10%;
+        overflow:auto;
     }
 
     @include tablet{
