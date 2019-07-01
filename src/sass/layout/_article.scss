@@ -27,7 +27,6 @@
         flex-grow: 1;
     }
 
-
     @include tablet{
         width: 80%;
         height: 80%;
@@ -38,12 +37,12 @@
         height: 80%;
     }
     @include large-desktop{
-        width: 80%;
+        width: 70%;
         height: 80%;
     }
 
     @include xlarge-desktop{
-        width: 80%;
+        width: 70%;
         height: 80%;
     }
 
