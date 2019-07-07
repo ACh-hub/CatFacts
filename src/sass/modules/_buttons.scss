@@ -11,8 +11,8 @@
     box-shadow: 0 2px 4px -2px $shadow;
 
     &:hover{
-        animation: button 1s;
-        animation-fill-mode: forwards;
+        animation: button 1s forwards;
+        animation-play-state: running;
     }
 
     &:active{

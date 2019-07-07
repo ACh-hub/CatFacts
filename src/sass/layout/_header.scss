@@ -2,11 +2,34 @@
     background-color: $header-background-color;
     height: 100%;
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+
+    .spacer {
+        flex:2;
+    }
+
+    #logo-animation-wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        
+        .box {
+            text-transform: uppercase;
+            @include font-koho-light;
+            font-size: 0.7em;
+            letter-spacing: 0.15em;   
+        }
+
+        #logo-wrapper {
+            width: 1.5em;
+            margin: 1em;
+        }
+    }
 
     #animation-cat {
         margin: 0 auto;
@@ -28,6 +51,7 @@
     @include desktop {
         height: 80%;
         width: 80%;
+
         #animation-cat {
             @include animation-change-size;
             }
@@ -36,7 +60,7 @@
 
     @include large-desktop {
         height: 80%;
-        width: 80%;
+        width: 70%;
         #animation-cat {
             @include animation-change-size;
             }
@@ -45,7 +69,7 @@
 
     @include xlarge-desktop {
         height: 80%;
-        width: 80%;
+        width: 70%;
         #animation-cat {
             @include animation-change-size;
             }

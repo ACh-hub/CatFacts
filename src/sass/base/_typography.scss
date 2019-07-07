@@ -1,20 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant&display=swap');
+@import url('https://fonts.googleapis.com/css?family=KoHo:300&display=swap');
 
-$font-stack: 'Cormorant',
+$font-stack-cormorant: 'Cormorant',
 serif;
 $light-weight:300;
 $normal-weight:400;
 $normal-line-height: 1.5em;
 
+$font-stack-koho: 'Koho',
+sans-serif;
+
+@mixin font-koho-light {
+    font-family: $font-stack-koho;
+    font-weight: $light-weight;
+    line-height: $normal-line-height;
+    color: $article-background-color;
+
+}
+
 @mixin font-cormorant-light {
-    font-family: $font-stack;
+    font-family: $font-stack-cormorant;
     font-weight: $light-weight;
     line-height: $normal-line-height;
     color: $text-grey;
 }
 
 @mixin font-cormorant-normal {
-    font-family: $font-stack;
+    font-family: $font-stack-cormorant;
     font-weight: $normal-weight;
     color: $text-grey;
 }
