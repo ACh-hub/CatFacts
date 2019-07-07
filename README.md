@@ -1,20 +1,10 @@
-# Project Boilerplate
+# Cat Facts
 
-Project boilerplate containing:
-Webpack
-Babel
-ESlint
-Normalize
-Sass (modified 7-1 style)
-i18n with Webpack
+Funny "cat facts" using https://alexwohlbruck.github.io/cat-facts/docs/ API. Create mostly to fiddle with https://github.com/airbnb/lottie-web features. 
 
 ## Installation
 
 ## Usage
-
-```
-npm run dev
-```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
